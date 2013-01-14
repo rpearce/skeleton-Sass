@@ -3,27 +3,13 @@
 @media only screen and (min-width: 480px) and (max-width: 767px)
   .container
     width: 420px
-  .container .columns,
-  .container .column
-    margin: 0
+    .columns, .column
+      margin: 0
 
-  .container .one.column,
-  .container .one.columns,
-  .container .two.columns,
-  .container .three.columns,
-  .container .four.columns,
-  .container .five.columns,
-  .container .six.columns,
-  .container .seven.columns,
-  .container .eight.columns,
-  .container .nine.columns,
-  .container .ten.columns,
-  .container .eleven.columns,
-  .container .twelve.columns,
-  .container .thirteen.columns,
-  .container .fourteen.columns,
-  .container .fifteen.columns,
-  .container .sixteen.columns,
-  .container .one-third.column,
-  .container .two-thirds.column
-    width: 420px
+    // Base Grid
+    $column-width: 420
+    $column-increment-amt: 0
+    +set-columns($column-width, $column-increment-amt)
+    .one-third.column,
+    .two-thirds.column
+      width: #{$column-width}px
