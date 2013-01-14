@@ -1,3 +1,17 @@
+// General Mixins
+@mixin border-radius($amount)
+  -webkit-border-radius: $amount
+  -moz-border-radius: $amount
+  -ms-border-radius: $amount
+  -o-border-radius: $amount
+  border-radius: $amount
+
+@mixin box-shadow($arg, $arg2: null, $arg3: null)
+  $arguments: $arg, $arg2, $arg3
+  @each $property in $box-shadow-prefixes
+    #{$property}: $arguments
+
+// Skeleton-specific Mixins
 @mixin set-columns($column-width, $column-increment-amt)
   // Iterate through each column name,
   // increase the size by the increment amount

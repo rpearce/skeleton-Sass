@@ -9,20 +9,18 @@ input[type="password"],
 input[type="email"],
 textarea,
 select
-  border: 1px solid #ccc
+  +border-radius(2px)
+  border: 1px solid $input-border-color
   padding: 6px 4px
   outline: none
-  -moz-border-radius: 2px
-  -webkit-border-radius: 2px
-  border-radius: 2px
-  font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
-  color: #777
+  font: $input-font
+  color: $input-color
   margin: 0
   width: 210px
   max-width: 100%
   display: block
   margin-bottom: 20px
-  background: #fff
+  background: $input-background
 
 select
   padding: 0
@@ -31,11 +29,9 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus
-  border: 1px solid #aaa
-  color: #444
-  -moz-box-shadow: 0 0 3px rgba(0,0,0,.2)
-  -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2)
-  box-shadow: 0 0 3px rgba(0,0,0,.2)
+  +box-shadow(0 0 3px rgba(0,0,0,.2))
+  border: 1px solid $input-focus-border-color
+  color: $input-focus-color
 
 textarea
   min-height: 60px
@@ -56,4 +52,4 @@ label span,
 legend span
   font-weight: normal
   font-size: 13px
-  color: #444
+  color: $legend-span-color
