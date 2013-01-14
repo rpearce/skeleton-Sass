@@ -1,7 +1,7 @@
 skeleton-Sass
 =============
 
-Sass port of the great Skeleton (www.getskeleton.com)
+Sass port of [Skeleton](www.getskeleton.com)
 
 ## Lay of the Land
 This port is heavily modulated. All of the Sass is located within
