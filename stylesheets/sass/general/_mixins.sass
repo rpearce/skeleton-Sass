@@ -1,0 +1,23 @@
+@mixin set-columns($column-width, $column-increment-amt)
+  // Iterate through each column name,
+  // increase the size by the increment amount
+  // for the next one.
+  @each $column in $columns
+    // @if-check is to ensure one.column &&
+    // one.columns get created. English, bro. -rwp
+    @if $column == one
+      .#{$column}.column
+        width: #{$column-width}px
+
+    .#{$column}.columns
+      width: #{$column-width}px
+      $column-width: $column-width + $column-increment-amt
+
+@mixin set-offsets($offset-padding, $offset-increment-amt)
+  // Iterate through each offset,
+  // increase the size by the increment amount
+  // for the next one.
+  @each $offset in $offsets
+    .offset-by-#{$offset}
+      padding-left: #{$offset-padding}px
+      $offset-padding: $offset-padding + $offset-increment-amt

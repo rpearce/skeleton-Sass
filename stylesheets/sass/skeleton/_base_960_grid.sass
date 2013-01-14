@@ -15,20 +15,8 @@
 
   // Base Grid
   $column-width: 40
-  $columns: one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen
-
-  // Iterate through each column name,
-  // increase the size by 60 for the next one.
-  @each $column in $columns
-    // @if-check is to ensure one.column &&
-    // one.columns get created. English, bro. -rwp
-    @if $column == one
-      .#{$column}.column
-        width: #{$column-width}px
-
-    .#{$column}.columns
-      width: #{$column-width}px
-      $column-width: $column-width + 60
+  $column-increment-amt: 60
+  +set-columns($column-width, $column-increment-amt)
 
   .one-third.column
     width: 300px
@@ -37,11 +25,8 @@
 
   // Offsets
   $offset-padding: 60
-  $offsets: one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen
-  @each $offset in $offsets
-    .offset-by-#{$offset}
-      padding-left: #{$offset-padding}px
-      $offset-padding: $offset-padding + 60
+  $offset-increment-amt: 60
+  +set-offsets($offset-padding, $offset-increment-amt)
 
 // Nested Column Classes
 .column.alpha, .columns.alpha
