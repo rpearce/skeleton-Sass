@@ -4,7 +4,6 @@ skeleton-Sass
 Modulated Sass port of [Skeleton](www.getskeleton.com)
 
 ## Getting Started
-Assuming you already have Ruby and Rubygems installed...
 
     $ git clone git@github.com:rpearce/skeleton-Sass.git
     $ cd skeleton-Sass
